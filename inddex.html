@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Event Hub</title>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <h1>Event Hub</h1>
+            <a href="#" id="menu" class="menu-icon">&#9776;</a>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+       <!-- Home Section -->
+       <section id="home" class="section">
+        <div class="container">
+            <h2>Welcome to Event Hub</h2>
+            <p>Discover upcoming events near you and join the excitement!</p>
+    
+            <!-- Informative Highlights -->
+            <div class="highlights">
+                <div class="highlight">
+                    <img src="eventcrowd.jpg" alt="Icon 1" class="highlight-img">
+                    <h3>Personalized Event Recommendations</h3>
+                    <p>Get event suggestions tailored to your preferences and location.</p>
+                </div>
+                <div class="highlight">
+                    <img src="con.jpeg" alt="Icon 2" class="highlight-img">
+                    <h3>Explore Diverse Categories</h3>
+                    <p>From tech conferences to art exhibitions, find events in all categories.</p>
+                </div>
+                <div class="highlight">
+                    <img src="eventnet.jpeg" alt="Icon 3" class="highlight-img">
+                    <h3>Easy Event Management</h3>
+                    <p>Manage your event bookings and schedules with just a few clicks.</p>
+                </div>
+            </div>
+    
+            <!-- Call-to-Action Buttons -->
+            <div class="button-container">
+                <a href="#events" class="btn primary">Explore Events</a>
+                <a href="#about" class="btn secondary">About Us</a>
+                <a href="#contact" class="btn tertiary">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    
+
+        <!-- Events Section -->
+        <section id="events" class="section">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="event-list">
+
+                    <!-- Event 1 -->
+                    <div class="event-card">
+                        <img src="ev1.jpg" alt="Event 1" class="event-img">
+                        <div class="event-info">
+                            <h3>Tech Conference 2024</h3>
+                            <p class="event-date">May 15, 2024</p>
+                            <p class="event-location">New York, NY</p>
+                            <p class="event-description">Join industry leaders for a day of innovation and networking at the biggest tech conference of the year.</p>
+                            <a href="event1.html" class="btn primary">Learn More</a>
+                        </div>
+                    </div>
+        
+                    <!-- Event 2 -->
+                    <div class="event-card">
+                        <img src="ev2.jpg" alt="Event 2" class="event-img">
+                        <div class="event-info">
+                            <h3>Art Exhibition 2025</h3>
+                            <p class="event-date">June 10, 2024</p>
+                            <p class="event-location">Los Angeles, CA</p>
+                            <p class="event-description">Explore the latest art installations and meet the artists behind the creations at the Art Exhibition 2024.</p>
+                            <a href="event2.html" class="btn secondary">Learn More</a>
+                        </div>
+                    </div>
+        
+                    <!-- Event 3 -->
+                    <div class="event-card">
+                        <img src="ev3.jpg" alt="Event 3" class="event-img">
+                        <div class="event-info">
+                            <h3>Music Festival 2025</h3>
+                            <p class="event-date">July 20, 2024</p>
+                            <p class="event-location">Chicago, IL</p>
+                            <p class="event-description">Join us for a weekend of live performances from top artists, food, and great vibes at the Music Festival 2024.</p>
+                            <a href="event3.html" class="btn tertiary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Event Hub is dedicated to connecting people with exciting events happening in their area. Whether you're passionate about tech conferences, art exhibitions, music festivals, or other cultural events, we're here to help you discover and participate in what interests you the most.</p>
+        
+                <div class="highlights">
+                    <div class="highlight">
+                        <img src="e4.jpeg" alt="Icon 1" class="highlight-img">
+                        <h3>Explore Diverse Events</h3>
+                        <p>Discover a wide range of events from technology to arts and entertainment.</p>
+                    </div>
+                    <div class="highlight">
+                        <img src="e5.png" alt="Icon 2" class="highlight-img">
+                        <h3>Personalized Recommendations</h3>
+                        <p>Get personalized event recommendations based on your interests and location.</p>
+                    </div>
+                    <div class="highlight">
+                        <img src="e6.png" alt="Icon 3" class="highlight-img">
+                        <h3>Easy Event Management</h3>
+                        <p>Manage your event schedule and bookings conveniently through our platform.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions or feedback? We'd love to hear from you!</p>
+        
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="4" required placeholder="Enter your message"></textarea>
+                    </div>
+        
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <h1>Event Hub</h1>
+                <p>Connecting you with the best events.</p>
+            </div>
+    
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home" class="footer-link">Home</a></li>
+                    <li><a href="#events" class="footer-link">Events</a></li>
+                    <li><a href="#about" class="footer-link">About</a></li>
+                    <li><a href="#contact" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+    
+            <div class="social-links">
+                <a href="https://github.com/DevUjjawal123" target="_blank"><img src="github.png" alt="Github" class="social-icon"></a>
+                <a href="https://twitter.com/Ujjawal1700" target="_blank"><img src="twitter.png" alt="Twitter" class="social-icon"></a>
+                <a href="https://www.linkedin.com/in/ujjawal-kumar-67b074225" target="_blank"><img src="linkdln.png" alt="LinkedIn" class="social-icon"></a>
+            </div>
+    
+            <div class="newsletter">
+                <form action="#" method="POST" class="newsletter-form">
+                    <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    
+        <p class="footer-bottom">&copy; 2024 Event Hub. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

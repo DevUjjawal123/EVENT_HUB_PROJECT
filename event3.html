@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Conference 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for a softer feel */
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+body:hover {
+    background-color: #e9ecef; /* Slight background color change on hover */
+}
+
+h1, h2, h3 {
+    color: #4e9fd1;
+    text-align: center;
+    font-family: 'Roboto', sans-serif; /* More modern font for headings */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for headings */
+h1:hover, h2:hover, h3:hover {
+    color: #007bff; /* Change color to blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the text on hover */
+}
+
+/* Responsive and interactive h1 */
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin-top: 10px;
+}
+
+/* Subtle animation for h1 on page load */
+h1 {
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+        /* Event Banner */
+        .event-banner {
+            background: url('even.jpg') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            background-size: cover;
+            
+        }
+
+        .event-banner h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .event-banner p {
+            font-size: 20px;
+            margin-top: 5px;
+            font-weight: lighter;
+        }
+
+        /* Event Details */
+        .event-details {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            max-width: 900px;
+            margin: -30px auto 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            animation: fadeIn 2s ease-in-out;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .event-details h2 {
+            font-size: 36px;
+            color: #FF6F61;
+            margin-bottom: 20px;
+        }
+
+        .event-details p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .event-details .date-location {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .btn {
+            background-color: #FF6F61;
+            color: white;
+            padding: 12px 30px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 30px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #FF4C3B;
+            transform: translateY(-5px);
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            font-size: 20px;
+            color: #FF6F61;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .event-banner h1 {
+                font-size: 35px;
+            }
+
+            .event-details {
+                padding: 20px;
+            }
+
+            .event-details h2 {
+                font-size: 28px;
+            }
+
+            .btn {
+                padding: 10px 25px;
+                font-size: 14px;
+            }
+
+            .gallery {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+      
+        .btn {
+      background-color: #4e9fd1;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .registration-form {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #f2f2f2;
+      border-radius: 8px;
+      display: none; /* initially hidden */
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+ <!-- Event Banner Section -->
+ <div class="event-banner">
+    <h1>Music Festival 2025– Where Beats Take Over
+    </h1>
+    <p>August 22–24, 2025 |India Expo Mart, Greater Noida </p>
+</div>
+
+<!-- Event Details Section -->
+<div class="event-details">
+    <h2>About the Event</h2>
+    <p>
+        Get ready to groove under the stars at Music Festival 2025, where rhythm meets soul!
+        From electrifying DJ sets and live bands to indie sensations and acoustic vibes — this festival brings music lovers together for a weekend of pure sonic joy.
+    </p>
+    <p class="date-location">
+        <strong>Date:</strong>  August 22–24, 2025<br>
+        <strong>Location:</strong>  India Expo Mart, Greater Noida<br>
+        <strong>Time:</strong>  4:00 PM – 12:00 AM
+    </p>
+
+    <!-- Countdown Timer -->
+    <div class="countdown" id="countdown-timer"></div>
+
+    <!-- Register Now Button -->
+    <a href="javascript:void(0)" class="btn" onclick="toggleForm()">Register Now</a>
+</div>
+
+<!-- Registration Form Section (Initially Hidden) -->
+<div id="registration-form" class="registration-form">
+    <h3>Register for Tech Conference 2024</h3>
+    <form action="#" method="POST">
+      <div class="form-group">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="company">Company (Optional):</label>
+        <input type="text" id="company" name="company">
+      </div>
+      <div class="form-group">
+        <label for="interest">What are you most interested in?</label>
+        <textarea id="interest" name="interest" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn">Submit Registration</button>
+      <button type="button" class="btn" onclick="toggleForm()">Cancel</button>
+    </form>
+  </div>
+
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        // Countdown Timer
+        const countDownDate = new Date("June 10, 2025 07:00:00").getTime();
+      
+        const x = setInterval(function () {
+          const now = new Date().getTime();
+          const distance = countDownDate - now;
+      
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+          const countdown = document.getElementById("countdown-timer");
+          if (countdown) {
+            if (distance < 0) {
+              clearInterval(x);
+              countdown.innerHTML = "Event Started!";
+            } else {
+              countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+          }
+        }, 1000);
+      
+        // Show/Hide Registration Form
+        function toggleForm() {
+          const form = document.getElementById("registration-form");
+          if (form) {
+            form.style.display = (form.style.display === "none" || form.style.display === "") ? "block" : "none";
+          }
+        }
+      
+        // Make toggleForm globally accessible (optional but safe in some setups)
+        window.toggleForm = toggleForm;
+      </script>
+      
+
+</body>
+</html>
